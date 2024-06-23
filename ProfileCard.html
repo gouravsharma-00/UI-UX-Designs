@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+        .card{
+            width: var(--width);
+            height: var(--height);
+            border: 1px solid rgba(46, 46, 46, 0.534);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--bgcolor);
+            color: var(--txcolor);
+        }
+        .card:hover{
+            border-color: blue;
+            box-shadow: 0px 0px 3px rgb(85, 85, 236);
+        }
+        .card_img{
+            width: 100%;
+            height: 50%;
+        }
+        .card_img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+        .card_avatar{
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            background-color: var(--bgcolor);
+            position: absolute;
+            top: calc(50% - 50px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card_avatar img{
+            height: calc(100% - 10px);
+            width : calc(100% - 10px);
+            border-radius: 100%;
+        }
+        .card_title{
+            font-weight: 700;
+            margin-top: calc(45px);
+            font-size:larger;
+        }
+        .card_subtitle{
+            font-size:small;
+        }
+        .card_button{
+            padding: 15px;
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            gap: 1rem;
+        }
+        .card_button button{
+            height: 30px;
+            width: 80px;
+            border: none;
+            border-radius: 5px;
+        }
+        .card_button button:hover{
+            background-color: var(--btcolor);
+            color: var(--bgcolor);
+        }
+    </style>
+</head>
+<body>
+    <div class="card" style="
+        --width: 250px;
+        --height: 320px;
+        --bgcolor: rgb(46, 46, 46);
+        --txcolor: white;
+        --btcolor: white;
+        ">
+        <div class="card_img"><img src="./img_01.jpg"></div>
+        <div class="card_avatar"><img src="./img_02.jpg" ></div>
+        <div class="card_title">Gourav Sharma</div>
+        <div class="card_subtitle">Full - stack developer</div>
+        <div class="card_button">
+            <button>Button 1</button>
+            <button>Button 2</button>
+        </div>
+    </div>
+</body>
+</html>
