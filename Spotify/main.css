@@ -1,0 +1,30 @@
+:root{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.main{
+    background-color: white;
+    padding: 10px;
+    height: 100vh;
+    width: max-content;
+    transition: all .3s ease;
+}
+main:hover{
+    width: 30vw;
+}
+.userInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.userInfo img{
+    border-radius: 50%;
+}
+.userInfo span {
+    width: max-content;
+}
