@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <meta http-equiv="Content Security Policy" content="default-src 'Self'" />
+        <title>Document</title></head>
+    <style>
+        header{
+            min-height: 80vh;
+            background: linear-gradient(rgb(37, 37, 235), violet);
+            border-radius: 13px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hotspot{
+            position: absolute;
+            background-color: white;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+        .pluse{
+            background-color: white;
+            position: absolute;
+            border-radius: 50%;
+            animation: pluse 1s infinite;
+        }
+
+        @keyframes pluse {
+            0%{
+                height: 0;
+                width:0;
+                opacity: 1;
+            }
+            50%{
+                height: 50px;
+                width: 50px;
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+
+        .tooltip{
+            position: absolute;
+            top: 50px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            color: black;
+            visibility: hidden;
+        }
+        .hotspot:hover .tooltip{
+            visibility: visible;
+        }
+    </style>
+    <body>
+        <header class="flex">
+            <div class="card">
+                <a href="#" class="hotspot flex">
+                    <div class="pluse"></div>
+                    <div class="tooltip">
+                        <h1>Gourav</h1>
+                        <hr>
+                        <p>Full Stack Developer</p>
+                    </div>
+                </a>
+            </div>
+        </header>
+    </body>
+
+</html>
